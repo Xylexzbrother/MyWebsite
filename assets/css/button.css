@@ -9,10 +9,6 @@ button {
     cursor: pointer;
 }
 
-body {
-    background: linear-gradient(45deg, #00539C, #EEA47F);
-}
-
 button:active {
     transform: scale(0.96);
 }

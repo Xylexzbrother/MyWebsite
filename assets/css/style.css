@@ -260,7 +260,7 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: url("../img/Background.gif") top right no-repeat;
   background-size: cover;
@@ -270,6 +270,13 @@ h6 {
 @media (min-width: 992px) {
   #hero {
     padding-left: 160px;
+  }
+}
+
+@media (max-width: 992px) {
+  #hero {
+    background-size: contain;
+    background-position: center;
   }
 }
 

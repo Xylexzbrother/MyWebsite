@@ -1,27 +1,47 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Digital Clock</title>
-        <link rel="stylesheet" href="assets/css/clock.css">
-        <link rel="stylesheet" href="assets/css/button.css">
-    </head>
-    <body>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Digital Clock</title>
+      <link rel="stylesheet" href="assets/css/clock.css">
+      <link rel="stylesheet" href="assets//css/button.css">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="display">
+            <div id="time"></div>
+         </div>
+         <span></span>
+         <span></span>
+      </div>
 
-        <button type="button" onclick="location.href='discordpage.html'">Back</button>
+      <a href="index.html" role="button">
+        <button class="glow-on-hover">🏠Home</button>
+      </a>
 
-        <div class="hero">
-            <div class="container">
-                <div class="clock">
-                    <span id="hrs">00</span>
-                    <span>:</span>
-                    <span id="min">00</span>
-                    <span>:</span>
-                    <span id="sec">00</span>
-                </div>
-            </div>
-        </div>
-
-        <script src="assets/js/clock.js"></script>
-    </body>
+      <script>
+         setInterval(()=>{
+           const time = document.querySelector(".display #time");
+           let date = new Date();
+           let hours = date.getHours();
+           let minutes = date.getMinutes();
+           let seconds = date.getSeconds();
+           let day_night = "AM";
+           if(hours > 12){
+             day_night = "PM";
+             hours = hours - 12;
+           }
+           if(seconds < 10){
+             seconds = "0" + seconds;
+           }
+           if(minutes < 10){
+             minutes = "0" + minutes;
+           }
+           if(hours < 10){
+             hours = "0" + hours;
+           }
+           time.textContent = hours + ":" + minutes + ":" + seconds + " "+ day_night;
+         });
+      </script>
+   </body>
 </html>
