@@ -1,0 +1,16 @@
+{
+    "rewrites": [
+        {
+            "source": "/circle",
+            "destination": "/api/app/circle.html"
+        },
+        {
+            "source": "/clock",
+            "destination": "/api/app/clock.html"
+        },
+        {
+            "source": "/discord",
+            "destination": "/api/app/discord.html"
+        }
+    ]
+}
